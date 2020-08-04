@@ -1,5 +1,5 @@
 html {
-    box-sizing: border-box;
+    box-sizing: border-box
   }
  
   /* The Universal Selector */
@@ -78,7 +78,6 @@ button {
 aside {
    
     grid-area: aside;
-    
 }
 
 main {
@@ -94,8 +93,10 @@ main {
 .pic{
     justify-content: center;
     align-content: center;
-    margin: 0 10px;
-    
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px; 
+       
 }
 
 
@@ -111,15 +112,15 @@ footer {
     place-items: center;
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 768px) {
     body {
       /* tablet - two column display */
       grid-template-columns: 1fr 4fr;
       grid-template-rows: 30px auto 100px;
       grid-template-areas: 
-        "header"
-        "side"
-        "content"
+        "nav"
+        "aside"
+        "main"
         "footer";
     }
   }
@@ -130,6 +131,23 @@ footer {
         display: grid;
         font-family: Helvetica;
         grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "nav nav nav"
+        "aside main main"
+        "footer footer footer";
+        height: 100vh;
+        margin: 0;
+        gap: 5px;
+    }
+  }
+
+  @media only screen and (min-width: 850px){
+    body {
+        background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        display: grid;
+        font-family: Helvetica;
+        grid-template-columns: 1fr 4fr;
         grid-template-rows: auto 1fr auto;
         grid-template-areas: 
         "nav nav nav"
