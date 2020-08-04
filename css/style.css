@@ -76,19 +76,19 @@ button {
 
 
 aside {
-    background-color: #38b18a;
+   
     grid-area: aside;
 }
 
 main {
-    background-color: #92d97c;
+    
     grid-column: 2/4;
     grid-area: main;
 }
 
 
 footer {
-    background-color: #f9f871;
+    
     height: 40px;
     grid-template-columns: 3/4;
     grid-area: footer;
@@ -103,11 +103,12 @@ footer {
     body {
       /* tablet - two column display */
       grid-template-columns: 1fr 4fr;
-      grid-template-rows: 50px auto 30px;
+      grid-template-rows: 30px auto 100px;
       grid-template-areas: 
-        "header header"
-        "side content"
-        "footer footer";
+        "header"
+        "side"
+        "content"
+        "footer";
     }
   }
 
